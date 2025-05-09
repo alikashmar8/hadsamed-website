@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account</title>
+    <style>
+        /* Import Roboto font */
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500|Montserrat:400,700|Sanchez:400,400italic');
+        
+        /* Base styles from your CSS */
+        body {
+            font-family: "Roboto", arial, sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 26px;
+            letter-spacing: .02em;
+            color: #88929a;
+            background-color: #f1f9ff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+        }
+        a:hover, a:active, a:focus {
+            outline: none;
+        }
+        
+        .container {
+            max-width: 1170px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .row-padded {
+            padding: 7em 0;
+        }
+        
+        /* Login form styles */
+        .login-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .login-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .login-header h2 {
+            font-family: "Montserrat", arial, sans-serif;
+            font-size: 28px;
+            color: #095D7E;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .login-header p {
+            color: #88929a;
+            margin: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 30px;
+        }
+        
+        .form-control {
+            display: block;
+            width: 100%;
+            height: 50px;
+            padding: 14px 12px;
+            font-size: 14px;
+            line-height: 1.42857;
+            color: #555555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        }
+        
+        .form-control:focus {
+            border-color: #095D7E;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(68, 218, 130, 0.6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(68, 218, 130, 0.6);
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            padding: 14px 12px;
+            font-size: 14px;
+            line-height: 1.42857;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+        }
+
+        .btn-primary {
+            color: #ffffff;
+            background-color: #aa0000;
+            border-color: #aa0000;
+            width: 100%;
+            font-family: "Montserrat", arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 3%;
+        }
+        
+        .btn-primary:hover, .btn-primary:focus {
+            color: #fff;
+            background-color: #14967f;
+            border-color: #14967f;
+        }
+        
+        .login-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #88929a;
+        }
+        
+        .login-footer a {
+            color: #095D7E;
+            text-decoration: none;
+        }
+        
+        .login-footer a:hover {
+            color: #14967f;
+            text-decoration: underline;
+        }
+        
+        .form-remember {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .form-remember input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        
+        .form-remember label {
+            margin: 0;
+            font-size: 14px;
+            color: #88929a;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .login-container {
+                padding: 30px 20px;
+            }
+            
+            .row-padded {
+                padding: 4em 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row-padded">
+            <div class="login-container">
+                <div class="login-header">
+                    <h2>Delete Account</h2>
+                    <p>Please enter your credentials to access your account</p>
+                </div>
+                
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Phone Number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" >Delete Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
